@@ -14,7 +14,7 @@ public class Palindrome {
             entryArray[i] = String.valueOf((entry.charAt(i)));
         }
 
-        for (int i = 0, j = entry.length(); i < j; i++)
+        for (int i = 0, j = entry.length(); i * i < j; i++)
         {
             palindromeArray[i] = entryArray[j - 1 - i];
         }
@@ -23,7 +23,7 @@ public class Palindrome {
     }
 
     public static void checkPalindrome(int length, String[] array1, String[] array2){
-        for(int i = 0; i < length; i++)
+        for(int i = 0; i * i < length; i++)
         {
             if (!(array1[i].equals(array2[i])) )
             {
